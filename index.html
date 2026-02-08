@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GFinds - Government Services</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans pb-24 lg:pb-0">
+
+    <div class="flex flex-col lg:flex-row min-h-screen">
+
+        <nav class="hidden lg:flex flex-col w-64 bg-white border-r border-gray-200 p-6 fixed h-full">
+            <h1 class="text-2xl font-bold text-blue-600 mb-10"><span class="text-red-500">GF</span>inds</h1>
+            <ul class="space-y-4 flex-1">
+                <li><a href="./index.html"
+                        class="flex items-center space-x-3 p-3 bg-blue-50 text-blue-600 rounded-xl font-semibold"><i
+                            class="fas fa-home"></i> <span>Home</span></a></li>
+                <li><a href="./news.html"
+                        class="flex items-center space-x-3 p-3 text-gray-500 hover:bg-gray-100 rounded-xl transition"><i
+                            class="fas fa-newspaper"></i> <span>News</span></a></li>
+                <li><a href="./about.html"
+                        class="flex items-center space-x-3 p-3 text-gray-500 hover:bg-gray-100 rounded-xl transition"><i
+                            class="fas fa-info-circle"></i> <span>About</span></a></li>
+                <li><a href="./account.html"
+                        class="flex items-center space-x-3 p-3 text-gray-500 hover:bg-gray-100 rounded-xl transition"><i
+                            class="fas fa-user"></i> <span>Account</span></a></li>
+            </ul>
+        </nav>
+
+        <main class="flex-1 lg:ml-64 p-4 md:p-8 max-w-6xl mx-auto w-full">
+
+            <header class="flex justify-between items-center mb-8">
+                <div class="lg:hidden text-2xl font-bold text-blue-600"><span class="text-red-500">GF</span>inds</div>
+                <div class="hidden lg:block">
+                    <h2 class="text-sm text-gray-500 uppercase tracking-widest">Dashboard</h2>
+                    <p class="text-xl font-bold">Welcome back, Von!</p>
+                </div>
+                <button class="relative p-2 bg-white rounded-full shadow-sm">
+                    <i class="fas fa-bell text-blue-600 text-xl"></i>
+                    <span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full"></span>
+                </button>
+            </header>
+
+            <section
+                class="flex flex-col md:flex-row items-center justify-between mb-10 bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <img src="../static/me.jpg" alt="User"
+                            class="w-16 h-16 rounded-full border-2 border-blue-400 object-cover">
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold text-blue-900">Hi, Von</h2>
+                        <p class="text-sm text-gray-400">arjunrenvon@gmail.com</p>
+                    </div>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <img src="../static/PH.avif" alt="PH Logo" class="w-16 opacity-80">
+                </div>
+            </section>
+
+            <section class="mb-10">
+                <h3 class="text-lg font-bold mb-4 flex items-center"><span
+                        class="w-1 h-6 bg-blue-600 rounded-full mr-3"></span> National Government Services</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div onclick="openModal('serviceModal')"
+                        class="glass-card p-4 rounded-2xl flex justify-between items-center hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer">
+                        <div>
+                            <p class="font-bold text-gray-800">NBI</p>
+                            <p class="text-[10px] text-gray-400 uppercase">National Bureau of Investigation</p>
+                        </div>
+                        <div
+                            class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center text-xs font-bold text-blue-700">
+                            NBI</div>
+                    </div>
+                    <div
+                        class="glass-card p-4 rounded-2xl flex justify-between items-center hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer">
+                        <div>
+                            <p class="font-bold text-gray-800">PhilHealth</p>
+                        </div>
+                        <div
+                            class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+                            <i class="fas fa-hand-holding-medical"></i></div>
+                    </div>
+                    <div
+                        class="glass-card p-4 rounded-2xl flex justify-between items-center hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer">
+                        <div>
+                            <p class="font-bold text-gray-800">SSS</p>
+                            <p class="text-[10px] text-gray-400 uppercase">Social Security System</p>
+                        </div>
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-800">
+                            <i class="fas fa-shield-alt"></i></div>
+                    </div>
+                    <div
+                        class="glass-card p-4 rounded-2xl flex justify-between items-center hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer">
+                        <div>
+                            <p class="font-bold text-gray-800">Pag-IBIG</p>
+                        </div>
+                        <div
+                            class="w-12 h-12 bg-yellow-50 rounded-full flex items-center justify-center text-orange-500">
+                            <i class="fas fa-home"></i></div>
+                    </div>
+                    <div
+                        class="glass-card p-4 rounded-2xl flex justify-between items-center hover:shadow-md hover:-translate-y-1 transition-all cursor-pointer">
+                        <div>
+                            <p class="font-bold text-gray-800">BIR</p>
+                            <p class="text-[10px] text-gray-400 uppercase">Bureau of Internal Revenue</p>
+                        </div>
+                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center text-red-600"><i
+                                class="fas fa-file-invoice-dollar"></i></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-10">
+                <h3 class="text-lg font-bold mb-4 flex items-center"><span
+                        class="w-1 h-6 bg-green-500 rounded-full mr-3"></span> Local Services</h3>
+                <div
+                    class="glass-card p-4 rounded-2xl flex justify-between items-center sm:max-w-xs hover:shadow-md transition cursor-pointer">
+                    <div>
+                        <p class="font-bold text-gray-800">LGU</p>
+                        <p class="text-[10px] text-gray-400 uppercase">Local Government Unit</p>
+                    </div>
+                    <div class="w-12 h-12 text-2xl text-gray-400"><i class="fas fa-university"></i></div>
+                </div>
+            </section>
+
+            <section class="mb-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-lg font-bold">News and Articles</h3>
+                    <a href="./news.html" class="text-blue-500 text-sm font-semibold">View All</a>
+                </div>
+                <div class="flex space-x-4 overflow-x-auto pb-4 no-scrollbar">
+                    <div class="min-w-[280px] bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100">
+                        <img src="../static/News1.jpg" class="object-top w-full h-40 object-cover" alt="Article">
+                        <div class="p-4">
+                            <span class="text-[10px] font-bold text-blue-600 uppercase">Government</span>
+                            <p class="font-bold text-sm mt-1">Senators alarmed over recent survey</p>
+                        </div>
+                    </div>
+                    <div class="min-w-[280px] bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100">
+                        <img src="../static/News2.jpeg" class="w-full h-40 object-bottom object-cover" alt="Article">
+                        <div class="p-4">
+                            <span class="text-[10px] font-bold text-blue-600 uppercase">SONA</span>
+                            <p class="font-bold text-sm mt-1">Upholding Press Freedom in the Philippines</p>
+                        </div>
+                    </div>
+                    <div class="min-w-[280px] bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100">
+                        <img src="../static/News2.jpeg" class="w-full h-40 object-bottom object-cover" alt="Article">
+                        <div class="p-4">
+                            <span class="text-[10px] font-bold text-blue-600 uppercase">SONA</span>
+                            <p class="font-bold text-sm mt-1">Upholding Press Freedom in the Philippines</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <nav
+            class="lg:hidden fixed bottom-0 w-full bg-white border-t border-gray-200 py-3 px-6 flex justify-between items-center">
+            <a href="./index.html" class="flex flex-col items-center text-blue-600">
+                <i class="fas fa-home text-xl"></i>
+                <span class="text-[10px] font-bold mt-1">Home</span>
+            </a>
+            <a href="./news.html" class="flex flex-col items-center text-gray-400">
+                <i class="fas fa-newspaper text-xl"></i>
+                <span class="text-[10px] mt-1">News</span>
+            </a>
+            <a href="./about.html" class="flex flex-col items-center text-gray-400">
+                <i class="fas fa-th-large text-xl"></i>
+                <span class="text-[10px] mt-1">About</span>
+            </a>
+            <a href="./account.html" class="flex flex-col items-center text-gray-400">
+                <i class="fas fa-user text-xl"></i>
+                <span class="text-[10px] mt-1">Account</span>
+            </a>
+        </nav>
+    </div>
+
+
+    <!-- Modal -->
+    <div id="serviceModal" class="modal fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-gray-900/40 backdrop-blur-sm transition-opacity"></div>
+
+        <div class="modal-content glass-card relative w-full max-w-lg bg-white rounded-[32px] shadow-2xl overflow-hidden transform transition-all scale-95 opacity-0 duration-300"
+            id="modalContentInner">
+
+            <div class="flex items-center justify-between p-6 border-b border-gray-100 bg-white/80 sticky top-0">
+                <div class="flex items-center space-x-4">
+                    <div
+                        class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-700 font-bold text-xs">
+                        NBI
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-gray-900 leading-none">NBI Services</h3>
+                        <p class="text-[10px] text-gray-400 uppercase tracking-wider mt-1">National Bureau of
+                            Investigation</p>
+                    </div>
+                </div>
+                <button onclick="closeModal('serviceModal')"
+                    class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 text-gray-400 hover:text-gray-600 transition">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="p-6 max-h-[70vh] overflow-y-auto no-scrollbar">
+                <div class="mb-8">
+                    <h4 class="text-blue-600 font-bold text-sm mb-3">Detalye ng serbisyo</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Pagbibigay serbisyo publiko para sa mga nais kumuha ng NBI Clearance mula sa National Bureau of
+                        Investigation (NBI) lalo na para sa mga <strong>First Time Job-Seekers</strong>.
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-2">
+                        <span class="w-1 h-5 bg-blue-600 rounded-full"></span>
+                        <h4 class="font-bold text-gray-800 text-sm uppercase tracking-widest">Requirements</h4>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-3 p-4 bg-gray-50 rounded-2xl border border-gray-100">
+                            <div
+                                class="w-6 h-6 bg-white rounded-lg shadow-sm flex items-center justify-center text-blue-600 text-xs font-bold">
+                                1</div>
+                            <p class="text-sm text-gray-600"><strong>Barangay Certificate</strong> na nagsasaad na first
+                                time job seeker ang nakapangalan.</p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 p-4 bg-gray-50 rounded-2xl border border-gray-100">
+                            <div
+                                class="w-6 h-6 bg-white rounded-lg shadow-sm flex items-center justify-center text-blue-600 text-xs font-bold">
+                                2</div>
+                            <p class="text-sm text-gray-600"><strong>Oath of undertaking</strong> (kinakailangan ng
+                                certification mula sa magulang kung 18yo below).</p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 p-4 bg-gray-50 rounded-2xl border border-gray-100">
+                            <div
+                                class="w-6 h-6 bg-white rounded-lg shadow-sm flex items-center justify-center text-blue-600 text-xs font-bold">
+                                3</div>
+                            <p class="text-sm text-gray-600">Dalawa (2) <strong>valid ID</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 p-4 bg-blue-50 rounded-2xl border border-blue-100">
+                    <p class="text-xs text-blue-800 font-medium mb-2">Ready to apply?</p>
+                    <a href="https://clearance.nbi.gov.ph" target="_blank"
+                        class="text-blue-600 font-bold text-sm flex items-center">
+                        Visit clearance.nbi.gov.ph
+                        <i class="fas fa-external-link-alt ml-2 text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="p-6 bg-white border-t border-gray-50">
+                <button onclick="closeModal('serviceModal')"
+                    class="w-full bg-blue-600 text-white font-bold py-4 rounded-2xl shadow-lg shadow-blue-200 hover:bg-blue-700 transition-all active:scale-95">
+                    Understood
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script/script.js"></script>
+
+</body>
+
+</html>

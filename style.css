@@ -1,0 +1,32 @@
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e7e7e7;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d5d5d5;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+.modal.active .modal-content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.modal .absolute.inset-0 {
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal.active .absolute.inset-0 {
+    opacity: 1;
+}
